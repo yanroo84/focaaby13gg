@@ -1,12 +1,12 @@
-<?php
+ï»¿<?php
 session_start();
 $host = 'localhost';
 $user = 'aaaaa';
 $pass = '00000';
 $db = 'mydb';
-$conn = mysqli_connect($host, $user, $pass,$db) or die('Error with MySQL connection'); //¸òMyMSQL³s½u¨Ãµn¤J
-mysqli_query($conn,"SET NAMES utf8"); //¿ï¾Ü½s½X
-//mysql_select_db($db, $conn); //¿ï¾Ü¸ê®Æ®w
+$conn = mysqli_connect($host, $user, $pass,$db) or die('Error with MySQL connection'); //è·ŸMyMSQLé€£ç·šä¸¦ç™»å…¥
+mysqli_query($conn,"SET NAMES utf8"); //é¸æ“‡ç·¨ç¢¼
+//mysql_select_db($db, $conn); //é¸æ“‡è³‡æ–™åº«
 
 $_SESSION['uID'] = "";
 $_SESSION['nick'] = "";
