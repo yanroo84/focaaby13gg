@@ -18,7 +18,7 @@
     <td>title</td>
     <td>message</td>
     <td>name</td>
-    <!-- <td>like</td> -->
+    <td>like</td> 
     <td>link</td>
   </tr>
 <?php
@@ -31,9 +31,10 @@ while (	$rs=mysqli_fetch_array($results)) {
 	"</td><td>" , $rs['title'],
 	"</td><td>" , $rs['msg'], 
 	"<td>", $rs['name'], "</td>",
-	//"<td>",$rs['like'],"個","<a href='like.php?id=",$rs['id'],"'>讚</a>","</td>",
+	"<td>",$rs['counter'],"個讚","</td>",
 	"<td>","<a href='03.delete.php?id=",$rs['id'] ,"' onclick='return confirm(\"are you sure ?\");'>砍</a></br>",
-	"<a href='04.editform.php?id=",$rs['id'] ,"'>編輯</a>","</td></td></tr>";
+	"<a href='04.editform.php?id=",$rs['id'] ,"'>編輯</a>","</td>",
+    "<td>","<a href='like.php?id=",$rs['id'],"'>讚</a>","</td></td></tr>";
 }
 ?>
 </table>
