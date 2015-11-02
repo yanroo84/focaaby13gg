@@ -17,4 +17,3 @@ mysqli_query($conn,"SET NAMES utf8"); //選擇編碼
         echo $_SESSION["nick"]," , Hello~~";
 
 ?>
-<!--focaaby剪GG-->
