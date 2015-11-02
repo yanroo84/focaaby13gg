@@ -2,10 +2,10 @@
 -- version 4.3.11
 -- http://www.phpmyadmin.net
 --
--- 主機: 127.0.0.1
--- 產生時間： 2015 �?10 ??25 ??22:17
--- 伺服器版本: 5.6.24
--- PHP 版本： 5.6.8
+-- Host: 127.0.0.1
+-- Generation Time: Nov 02, 2015 at 11:39 AM
+-- Server version: 5.6.24
+-- PHP Version: 5.6.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- 資料庫： `mydb`
+-- Database: `mydb`
 --
 
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `guestbook`
+-- Table structure for table `guestbook`
 --
 
 CREATE TABLE IF NOT EXISTS `guestbook` (
@@ -31,56 +31,60 @@ CREATE TABLE IF NOT EXISTS `guestbook` (
   `title` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `msg` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `like` int(200) NOT NULL DEFAULT '0',
-  `status` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `counter` int(200) NOT NULL DEFAULT '0',
+  `status` int(11) NOT NULL DEFAULT '0',
+  `tag` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 資料表的匯出資料 `guestbook`
+-- Dumping data for table `guestbook`
 --
 
-INSERT INTO `guestbook` (`id`, `title`, `msg`, `name`, `like`, `status`) VALUES
-(1, '111', '111', '111', 0, 0),
-(2, '222', '222', '222', 0, 0);
+INSERT INTO `guestbook` (`id`, `title`, `msg`, `name`, `counter`, `status`, `tag`) VALUES
+(1, '1113', '111', '111', 0, 0, 4),
+(2, '222', '222', '222', 0, 0, 4),
+(3, '333333', '333', '333', 0, 0, 4),
+(4, 'aaa', 'aaa', 'aaa', 0, 0, 2);
 
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
   `id` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nickname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL
+  `nickname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `likes` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 資料表的匯出資料 `user`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `password`, `nickname`) VALUES
-('111', '222', 'Andrew');
+INSERT INTO `user` (`id`, `password`, `nickname`, `likes`) VALUES
+('111', '222', 'Andrew', 0);
 
 --
--- 已匯出資料表的索引
+-- Indexes for dumped tables
 --
 
 --
--- 資料表索引 `guestbook`
+-- Indexes for table `guestbook`
 --
 ALTER TABLE `guestbook`
   ADD PRIMARY KEY (`id`);
 
 --
--- 在匯出的資料表使用 AUTO_INCREMENT
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- 使用資料表 AUTO_INCREMENT `guestbook`
+-- AUTO_INCREMENT for table `guestbook`
 --
 ALTER TABLE `guestbook`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
