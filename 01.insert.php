@@ -17,9 +17,10 @@
 $title=mysqli_real_escape_string($conn,    $_POST['title']   );
 $msg=mysqli_real_escape_string($conn,$_POST['msg']);
 $name=mysqli_real_escape_string($conn,$_POST['myname']);
+$tag=mysqli_real_escape_string($conn,$_POST['tag']);
 
 if ($title) {
-	$sql = "insert into guestbook (title, msg, name) values ('$title', '$msg','$name');";
+	$sql = "insert into guestbook (title, msg, name, tag) values ('$title', '$msg','$name','$tag');";
 	mysqli_query($conn,$sql) or die("MySQL insert message error"); //執行SQL
 	echo "message added.";
 header("Refresh:1;url=02.list.php");
