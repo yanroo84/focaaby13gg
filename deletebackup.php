@@ -10,7 +10,7 @@
 
 <body>
 
-<p>my guest book !! </p> 
+<p>deleted message !! </p> 
 <hr />
 <table width="200" border="1">
   <tr>
