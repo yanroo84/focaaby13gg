@@ -22,7 +22,7 @@ if ($id>0) {
 } else {
 	echo "empty id, cannot delete.";
 }
-header("Refresh:1;url=02.list.php");
+header("Refresh:1;url=deletebackup.php");
 ?>
 </body>
 </html>
